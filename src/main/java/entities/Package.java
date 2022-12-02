@@ -16,6 +16,7 @@ public class Package {
         this.type = type;
     }
 
+    public Package() {    }
 
     public int getId() {
         return id;
