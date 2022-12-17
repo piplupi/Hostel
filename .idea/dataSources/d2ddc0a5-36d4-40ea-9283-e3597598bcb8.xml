@@ -1084,137 +1084,196 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="305" parent="290" name="package_seq">
+    <table id="305" parent="290" name="parkinglot">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="306" parent="290" name="parking">
+    <table id="306" parent="290" name="person">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="307" parent="290" name="person">
+    <table id="307" parent="290" name="rooms">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="308" parent="290" name="room">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </table>
-    <column id="309" parent="303" name="idcars">
+    <column id="308" parent="303" name="id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="310" parent="303" name="persoonid">
+    <column id="309" parent="303" name="persoonid">
       <DataType>int|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="311" parent="303" name="platenumb">
+    <column id="310" parent="303" name="platenumb">
       <DataType>varchar(45)|0s</DataType>
       <Position>3</Position>
     </column>
+    <foreign-key id="311" parent="303" name="persoonfk">
+      <ColNames>persoonid</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>person</RefTableName>
+    </foreign-key>
     <index id="312" parent="303" name="PRIMARY">
-      <ColNames>idcars</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="313" parent="303" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="314" parent="304" name="id">
-      <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="315" parent="304" name="type">
-      <DataType>varchar(255)|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <index id="316" parent="304" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="317" parent="304" name="PRIMARY">
+    <index id="313" parent="303" name="persoonfk_idx">
+      <ColNames>persoonid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="314" parent="303" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="318" parent="305" name="next_val">
-      <DataType>bigint|0s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="319" parent="306" name="idparking">
+    <column id="315" parent="304" name="id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="320" parent="306" name="carid">
-      <DataType>int|0s</DataType>
+    <column id="316" parent="304" name="type">
+      <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
     </column>
-    <index id="321" parent="306" name="PRIMARY">
-      <ColNames>idparking</ColNames>
+    <index id="317" parent="304" name="PRIMARY">
+      <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="322" parent="306" name="PRIMARY">
+    <key id="318" parent="304" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="323" parent="307" name="idperson">
+    <column id="319" parent="305" name="id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="324" parent="307" name="voornaam">
+    <column id="320" parent="305" name="carid">
+      <DataType>int|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <foreign-key id="321" parent="305" name="carfk">
+      <ColNames>carid</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>cars</RefTableName>
+    </foreign-key>
+    <index id="322" parent="305" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="323" parent="305" name="carfk_idx">
+      <ColNames>carid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="324" parent="305" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="325" parent="306" name="id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="326" parent="306" name="voornaam">
       <DataType>varchar(45)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="325" parent="307" name="achternaam">
+    <column id="327" parent="306" name="achternaam">
       <DataType>varchar(45)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="326" parent="307" name="packageid">
+    <column id="328" parent="306" name="packageid">
       <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="327" parent="307" name="parkingid">
+    <column id="329" parent="306" name="parkingid">
       <DataType>int|0s</DataType>
       <Position>5</Position>
     </column>
-    <index id="328" parent="307" name="PRIMARY">
-      <ColNames>idperson</ColNames>
+    <column id="330" parent="306" name="roomid">
+      <DataType>int|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <foreign-key id="331" parent="306" name="packagefk">
+      <ColNames>packageid</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>package</RefTableName>
+    </foreign-key>
+    <foreign-key id="332" parent="306" name="parkingfk">
+      <ColNames>parkingid</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>parkinglot</RefTableName>
+    </foreign-key>
+    <foreign-key id="333" parent="306" name="roomfk">
+      <ColNames>roomid</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>rooms</RefTableName>
+    </foreign-key>
+    <index id="334" parent="306" name="PRIMARY">
+      <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="329" parent="307" name="PRIMARY">
+    <index id="335" parent="306" name="packagefk_idx">
+      <ColNames>packageid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="336" parent="306" name="parkingfk_idx">
+      <ColNames>parkingid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="337" parent="306" name="roomfk_idx">
+      <ColNames>roomid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="338" parent="306" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="330" parent="308" name="idroom">
+    <column id="339" parent="307" name="id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="331" parent="308" name="personid">
+    <column id="340" parent="307" name="personid">
       <DataType>int|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="332" parent="308" name="packageid">
+    <column id="341" parent="307" name="packageid">
       <DataType>int|0s</DataType>
       <Position>3</Position>
     </column>
-    <index id="333" parent="308" name="PRIMARY">
-      <ColNames>idroom</ColNames>
+    <foreign-key id="342" parent="307" name="roompersonfk">
+      <ColNames>personid</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>person</RefTableName>
+    </foreign-key>
+    <foreign-key id="343" parent="307" name="roompackagefk">
+      <ColNames>packageid</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>package</RefTableName>
+    </foreign-key>
+    <index id="344" parent="307" name="PRIMARY">
+      <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="334" parent="308" name="PRIMARY">
+    <index id="345" parent="307" name="personfk_idx">
+      <ColNames>personid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="346" parent="307" name="packagefk_idx">
+      <ColNames>packageid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="347" parent="307" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

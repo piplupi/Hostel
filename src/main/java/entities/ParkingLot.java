@@ -3,11 +3,15 @@ package entities;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
-public class Parking {
+public class ParkingLot {
     @Id
     @GeneratedValue
     private int id;
-    private String Car;
+    private String car;
+
+    public ParkingLot(String car) {
+        this.car = car;
+    }
 
     public int getId() {
         return id;
@@ -18,11 +22,11 @@ public class Parking {
     }
 
     public String getCar() {
-        return Car;
+        return car;
     }
 
     public void setCar(String Car) {
-        this.Car = Car;
+        this.car = Car;
     }
 
 }

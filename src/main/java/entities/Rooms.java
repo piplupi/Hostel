@@ -1,10 +1,20 @@
 package entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@SuppressWarnings("ALL")
+@Entity
+@Table
 public class Rooms {
 
+    @Id
+    @GeneratedValue
     private Integer id;
-    private Package packageId;
-    private Parking parkingId;
+    private Person personId;
+    private ParkingLot parkingLotId;
 
 
     public Integer getId() {
@@ -15,20 +25,20 @@ public class Rooms {
         this.id = id;
     }
 
-    public Package getPackageId() {
-        return packageId;
+    public Person getPersonId() {
+        return personId;
     }
 
-    public void setPackageId(Package packageId) {
-        this.packageId = packageId;
+    public void setPersonId(Person personId) {
+        this.personId = personId;
     }
 
-    public Parking getParkingId() {
-        return parkingId;
+    public ParkingLot getParkingId() {
+        return parkingLotId;
     }
 
-    public void setParkingId(Parking parkingId) {
-        this.parkingId = parkingId;
+    public void setParkingId(ParkingLot parkingLotId) {
+        this.parkingLotId = parkingLotId;
     }
 
 }

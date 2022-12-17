@@ -5,22 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d59d13c-2a01-431c-aa68-106b47c106de" name="Changes" comment="1st">
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Cars.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repositories/CarsRepositories.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repositories/PersonRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/CarsServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/PersonServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d2ddc0a5-36d4-40ea-9283-e3597598bcb8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d2ddc0a5-36d4-40ea-9283-e3597598bcb8.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Cars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Cars.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entities/Package.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Package.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Parking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Parking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Parking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/ParkingLot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entities/Rooms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Rooms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/ParkingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/ParkingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/RoomsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/RoomsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/ParkingServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ParkingServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/ParkingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/ParkingLotRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/PersonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/ParkingServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ParkingLotServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/PersonServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/PersonServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669253476214</updated>
-      <workItem from="1669253477916" duration="19534000" />
+      <workItem from="1669253477916" duration="37042000" />
     </task>
     <task id="LOCAL-00001" summary="1st">
       <created>1669852268148</created>
@@ -112,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669852316261</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1st">
+      <created>1669973169047</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669973169047</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
